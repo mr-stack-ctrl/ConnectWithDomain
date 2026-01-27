@@ -1,0 +1,636 @@
+PS D:\Operator3\Downloads\demo\pro\FPWA> $ npx pwa-asset-generator logo.png icons
+$ : The term '$' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, 
+verify that the path is correct and try again.
+At line:1 char:1
++ $ npx pwa-asset-generator logo.png icons
+Need to install the following packages:
+pwa-asset-generator@8.1.2
+Ok to proceed? (y) y
+
+npm error code ECOMPROMISED
+npm error Lock compromised
+npm notice
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+pwa-asset-generator@8.0.4
+Ok to proceed? (y) y
+
+npm error code ECOMPROMISED
+npm error Lock compromised
+npm error A complete log of this run can be found in: C:\Users\Operator3\AppData\Local\npm-cache\_logs\2026-01-22T05_34_43_551Z-debug-0.log
+PS D:\Operator3\Downloads\demo\pro\FPWA> npm config set package-lock false
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA> npx --yes https://registry.npmjs.org/pwa-asset-generator/-/pwa-asset-generator-8.0.4.tgz logo.png icons
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+PS D:\Operator3\Downloads\demo\pro\FPWA> Remove-Item -Recurse -Force "$env:APPDATA\npm" -ErrorAction SilentlyContinue
+PS D:\Operator3\Downloads\demo\pro\FPWA> node -v
+PS D:\Operator3\Downloads\demo\pro\FPWA> npm -v
+11.6.2
+PS D:\Operator3\Downloads\demo\pro\FPWA> npx pwa-asset-generator@8.0.4 logo.png icons
+Need to install the following packages:
+pwa-asset-generator@8.0.4
+Ok to proceed? (y) y
+
+npm error code ECOMPROMISED
+npm error Lock compromised
+npm notice
+npm notice New minor version of npm available! 11.6.2 -> 11.8.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.8.0
+npm notice To update run: npm install -g npm@11.8.0
+npm error A complete log of this run can be found in: C:\Users\Operator3\AppData\Local\npm-cache\_logs\2026-01-22T05_44_38_834Z-debug-0.log
+PS D:\Operator3\Downloads\demo\pro\FPWA> Remove-Item -Recurse -Force "C:\Program Files\nodejs" -ErrorAction SilentlyContinue
+PS D:\Operator3\Downloads\demo\pro\FPWA> Remove-Item -Recurse -Force "$env:APPDATA\npm" -ErrorAction SilentlyContinue
+PS D:\Operator3\Downloads\demo\pro\FPWA> Remove-Item -Recurse -Force "$env:LOCALAPPDATA\npm-cache" -ErrorAction SilentlyContinue
+PS D:\Operator3\Downloads\demo\pro\FPWA> node -v
+v24.12.0
+PS D:\Operator3\Downloads\demo\pro\FPWA> node -v
+v20.20.0
+npm error errno -4058
+npm error enoent ENOENT: no such file or directory, lstat 'C:\Users\Operator3\AppData\Roaming\npm'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.8.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.8.0
+npm notice To update run: npm install -g npm@11.8.0
+npm notice
+npm error A complete log of this run can be found in: C:\Users\Operator3\AppData\Local\npm-cache\_logs\2026-01-22T05_48_42_364Z-debug-0.log
+npm error code ENOENT
+npm error syscall lstat
+npm error path C:\Users\Operator3\AppData\Roaming\npm
+npm error errno -4058
+npm error enoent ENOENT: no such file or directory, lstat 'C:\Users\Operator3\AppData\Roaming\npm'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: C:\Users\Operator3\AppData\Local\npm-cache\_logs\2026-01-22T05_49_06_672Z-debug-0.log
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+
+----                 -------------         ------ ----
+
+
+PS D:\Operator3\Downloads\demo\pro\FPWA> mkdir "$env:APPDATA\npm-cache"
+
+
+    Directory: C:\Users\Operator3\AppData\Roaming
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        22-01-2026     11:19                npm-cache
+
+
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA> npm config set prefix "$env:APPDATA\npm"
+PS D:\Operator3\Downloads\demo\pro\FPWA> npm config set cache "$env:APPDATA\npm-cache"
+PS D:\Operator3\Downloads\demo\pro\FPWA>
+PS D:\Operator3\Downloads\demo\pro\FPWA> npm config get prefix
+C:\Users\Operator3\AppData\Roaming\npm
+PS D:\Operator3\Downloads\demo\pro\FPWA> npm config get cache
+C:\Users\Operator3\AppData\Roaming\npm-cache
+PS D:\Operator3\Downloads\demo\pro\FPWA> npx pwa-asset-generator@8.0.4 logo.png icons
+Need to install the following packages:
+pwa-asset-generator@8.0.4
+Ok to proceed? (y) y
+
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+11:21:21 am getSplashScreenMetaData Initialising puppeteer to load latest splash screen metadata 🤖
+11:21:22 am getAppleSplashScreenData Navigating to Apple Human Interface Guidelines website - https://developer.apple.com/design/human-interface-guidelines/layout/
+11:21:36 am getAppleSplashScreenData Waiting for the data table to be loaded
+11:21:36 am getAppleSplashScreenData Retrieved splash screen data
+11:21:36 am getSplashScreenMetaData Loaded metadata for iOS platform 🙌
+11:21:36 am generateImages Looks like folder icons doesn't exist. Created one for you 🤔
+11:21:36 am saveImages Initialising puppeteer to take screenshots 🤖
+11:21:36 am getShellHtml Generating shell html with provided image source
+11:21:36 am getShellHtml Providing shell html as page content
+11:21:43 am saveImages Saved image apple-splash-2732-2048 🙌
+11:21:43 am saveImages Saved image apple-splash-2048-2732 🙌
+11:21:44 am saveImages Saved image apple-splash-1668-2388 🙌
+11:21:44 am saveImages Saved image apple-splash-2388-1668 🙌
+11:21:44 am saveImages Saved image apple-splash-1536-2048 🙌
+11:21:44 am saveImages Saved image apple-splash-2048-1536 🙌
+11:21:44 am saveImages Saved image apple-splash-1640-2360 🙌
+11:21:44 am saveImages Saved image apple-splash-2360-1640 🙌
+11:21:44 am saveImages Saved image apple-splash-1668-2224 🙌
+11:21:45 am saveImages Saved image apple-splash-2224-1668 🙌
+11:21:45 am saveImages Saved image apple-splash-1620-2160 🙌
+11:21:45 am saveImages Saved image apple-splash-2160-1620 🙌
+11:21:45 am saveImages Saved image apple-splash-1488-2266 🙌
+11:21:45 am saveImages Saved image apple-splash-2266-1488 🙌
+11:21:45 am saveImages Saved image apple-splash-1320-2868 🙌
+11:21:45 am saveImages Saved image apple-splash-2868-1320 🙌
+11:21:45 am saveImages Saved image apple-splash-1206-2622 🙌
+11:21:46 am saveImages Saved image apple-splash-2622-1206 🙌
+11:21:46 am saveImages Saved image apple-splash-1260-2736 🙌
+11:21:46 am saveImages Saved image apple-splash-2736-1260 🙌
+11:21:46 am saveImages Saved image apple-splash-1290-2796 🙌
+11:21:46 am saveImages Saved image apple-splash-2796-1290 🙌
+11:21:46 am saveImages Saved image apple-splash-1179-2556 🙌
+11:21:46 am saveImages Saved image apple-splash-2556-1179 🙌
+11:21:46 am saveImages Saved image apple-splash-1170-2532 🙌
+11:21:47 am saveImages Saved image apple-splash-2532-1170 🙌
+11:21:47 am saveImages Saved image apple-splash-1284-2778 🙌
+11:21:47 am saveImages Saved image apple-splash-2778-1284 🙌
+11:21:47 am saveImages Saved image apple-splash-1125-2436 🙌
+11:21:47 am saveImages Saved image apple-splash-2436-1125 🙌
+11:21:47 am saveImages Saved image apple-splash-1242-2688 🙌
+11:21:47 am saveImages Saved image apple-splash-2688-1242 🙌
+11:21:47 am saveImages Saved image apple-splash-828-1792 🙌
+11:21:47 am saveImages Saved image apple-splash-1792-828 🙌
+11:21:47 am saveImages Saved image apple-splash-1242-2208 🙌
+11:21:48 am saveImages Saved image apple-splash-2208-1242 🙌
+11:21:48 am saveImages Saved image apple-splash-750-1334 🙌
+11:21:48 am saveImages Saved image apple-splash-1334-750 🙌
+11:21:48 am saveImages Saved image apple-splash-640-1136 🙌
+11:21:48 am saveImages Saved image apple-splash-1136-640 🙌
+11:21:48 am saveImages Saved image apple-icon-180 🙌
+11:21:48 am saveImages Saved image manifest-icon-192 🙌
+11:21:48 am saveImages Saved image manifest-icon-512 🙌
+11:21:49 am cli Web App Manifest file is not specified, printing out the content to console instead 🤔
+11:21:49 am cli Below is the icons content for your manifest.json file. You can copy/paste it manually 🙌
+
+[
+  {
+    "src": "icons/manifest-icon-192.maskable.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "any"
+  },
+  {
+    "src": "icons/manifest-icon-192.maskable.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "purpose": "maskable"
+  },
+  {
+    "src": "icons/manifest-icon-512.maskable.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "any"
+  },
+  {
+    "src": "icons/manifest-icon-512.maskable.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "purpose": "maskable"
+  }
+]
+
+
+11:21:49 am cli Index html file is not specified, printing out the content to console instead 🤔
+11:21:49 am cli Below is the iOS meta tags content for your index.html file. You can copy/paste it manually 🙌
+
+
+<link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1640-2360.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2360-1640.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1488-2266.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2266-1488.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 
+2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1320-2868.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2868-1320.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1206-2622.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2622-1206.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1260-2736.jpg" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2736-1260.jpg" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+
+PS D:\Operator3\Downloads\demo\pro\FPWA> ^C
+PS D:\Operator3\Downloads\demo\pro\FPWA> npx serve 
+Need to install the following packages:
+serve@14.2.5
+Ok to proceed? (y) y
+
+
+   ┌──────────────────────────────────────────┐
+   │                                          │
+   │   Serving!                               │
+   │                                          │
+   │   - Local:    http://localhost:3000      │
+   │   - Network:  http://192.168.1.27:3000   │
+   │                                          │
+   │   Copied local address to clipboard!     │
+   │                                          │
+   └──────────────────────────────────────────┘
+
+ HTTP  22/1/2026 11:31:13 am ::1 GET /
+ HTTP  22/1/2026 11:31:13 am ::1 Returned 200 in 24 ms
+ HTTP  22/1/2026 11:31:13 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:31:13 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:31:13 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:31:13 am ::1 Returned 404 in 7 ms
+ HTTP  22/1/2026 11:31:20 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:31:20 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:31:20 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:31:20 am ::1 Returned 404 in 13 ms
+ HTTP  22/1/2026 11:32:28 am ::1 GET /
+ HTTP  22/1/2026 11:32:28 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:32:28 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:32:28 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:32:28 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:32:28 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:32:28 am ::1 Returned 404 in 25 ms
+ HTTP  22/1/2026 11:32:28 am ::1 Returned 404 in 24 ms
+ HTTP  22/1/2026 11:32:28 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:32:28 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:35:12 am ::1 GET /
+ HTTP  22/1/2026 11:35:12 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:35:12 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:35:12 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:35:12 am ::1 Returned 304 in 13 ms
+ HTTP  22/1/2026 11:35:12 am ::1 Returned 200 in 5 ms
+ HTTP  22/1/2026 11:35:12 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:35:12 am ::1 Returned 404 in 11 ms
+ HTTP  22/1/2026 11:37:43 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:37:43 am ::1 Returned 304 in 3 ms
+ HTTP  22/1/2026 11:37:43 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:37:43 am ::1 Returned 404 in 3 ms
+ HTTP  22/1/2026 11:37:54 am ::1 GET /
+ HTTP  22/1/2026 11:37:54 am ::1 Returned 304 in 3 ms
+ HTTP  22/1/2026 11:37:54 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:37:54 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:37:54 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:37:54 am ::1 Returned 304 in 9 ms
+ HTTP  22/1/2026 11:37:54 am ::1 Returned 304 in 5 ms
+ HTTP  22/1/2026 11:37:54 am ::1 Returned 404 in 49 ms
+ HTTP  22/1/2026 11:37:55 am ::1 GET /
+ HTTP  22/1/2026 11:37:55 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:37:55 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:37:55 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:37:55 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:37:55 am ::1 Returned 304 in 6 ms
+ HTTP  22/1/2026 11:37:55 am ::1 Returned 304 in 5 ms
+ HTTP  22/1/2026 11:37:55 am ::1 Returned 404 in 12 ms
+ HTTP  22/1/2026 11:37:56 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:37:56 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:38:00 am ::1 GET /
+ HTTP  22/1/2026 11:38:00 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:38:00 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:38:00 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:38:00 am ::1 Returned 304 in 15 ms
+ HTTP  22/1/2026 11:38:00 am ::1 Returned 304 in 6 ms
+ HTTP  22/1/2026 11:38:00 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:38:00 am ::1 Returned 404 in 10 ms
+ HTTP  22/1/2026 11:38:02 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:38:02 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:38:05 am ::1 GET /
+ HTTP  22/1/2026 11:38:05 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:38:05 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:38:05 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:38:05 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:38:05 am ::1 Returned 404 in 4 ms
+ HTTP  22/1/2026 11:38:29 am ::1 GET /
+ HTTP  22/1/2026 11:38:29 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:38:29 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:38:29 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:38:29 am ::1 Returned 304 in 5 ms
+ HTTP  22/1/2026 11:38:29 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:38:29 am ::1 Returned 304 in 5 ms
+ HTTP  22/1/2026 11:38:29 am ::1 Returned 404 in 7 ms
+ HTTP  22/1/2026 11:38:30 am ::1 GET /
+ HTTP  22/1/2026 11:38:30 am ::1 Returned 304 in 3 ms
+ HTTP  22/1/2026 11:38:30 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:38:30 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:38:30 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:38:30 am ::1 Returned 304 in 8 ms
+ HTTP  22/1/2026 11:38:30 am ::1 Returned 304 in 13 ms
+ HTTP  22/1/2026 11:38:30 am ::1 Returned 404 in 24 ms
+ HTTP  22/1/2026 11:38:31 am ::1 GET /
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:38:31 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:38:31 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:38:31 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 35 ms
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 404 in 49 ms
+ HTTP  22/1/2026 11:38:31 am ::1 GET /
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:38:31 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:38:31 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:38:31 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 404 in 14 ms
+ HTTP  22/1/2026 11:38:31 am ::1 GET /
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:38:31 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:38:31 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:38:31 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 8 ms
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 304 in 7 ms
+ HTTP  22/1/2026 11:38:31 am ::1 Returned 404 in 32 ms
+ HTTP  22/1/2026 11:38:32 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:38:32 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:39:20 am ::1 GET /
+ HTTP  22/1/2026 11:39:20 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:39:20 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:39:20 am ::1 Returned 404 in 1 ms
+ HTTP  22/1/2026 11:39:20 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:39:20 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:39:20 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:39:20 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:39:20 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:39:20 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:39:23 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:39:23 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:39:23 am ::1 GET /robots.txt
+ HTTP  22/1/2026 11:39:23 am ::1 Returned 404 in 3 ms
+ HTTP  22/1/2026 11:39:23 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:39:23 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:39:25 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:39:25 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:39:25 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:39:25 am ::1 Returned 404 in 5 ms
+ HTTP  22/1/2026 11:39:26 am ::1 GET /
+ HTTP  22/1/2026 11:39:26 am ::1 Returned 304 in 6 ms
+ HTTP  22/1/2026 11:39:26 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:39:26 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:39:26 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:39:26 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:39:28 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:39:28 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:39:47 am ::1 GET /
+ HTTP  22/1/2026 11:39:47 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:39:47 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:39:47 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:39:49 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:39:49 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:39:51 am ::1 GET /
+ HTTP  22/1/2026 11:39:51 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:39:51 am ::1 Returned 304 in 3 ms
+ HTTP  22/1/2026 11:39:51 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:39:51 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:39:51 am ::1 Returned 404 in 4 ms
+ HTTP  22/1/2026 11:39:56 am ::1 GET /
+ HTTP  22/1/2026 11:39:56 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:39:57 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:39:57 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:39:57 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:39:57 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:39:57 am ::1 Returned 304 in 6 ms
+ HTTP  22/1/2026 11:39:57 am ::1 Returned 404 in 27 ms
+ HTTP  22/1/2026 11:39:58 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:39:58 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:40:00 am ::1 GET /
+ HTTP  22/1/2026 11:40:00 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:40:00 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:40:00 am ::1 Returned 304 in 3 ms
+ HTTP  22/1/2026 11:40:02 am ::1 GET /
+ HTTP  22/1/2026 11:40:02 am ::1 Returned 200 in 24 ms
+ HTTP  22/1/2026 11:40:02 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:40:02 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:40:02 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:40:02 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:40:02 am ::1 Returned 200 in 7 ms
+ HTTP  22/1/2026 11:40:02 am ::1 Returned 200 in 4 ms
+ HTTP  22/1/2026 11:40:02 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:40:02 am ::1 Returned 404 in 11 ms
+ HTTP  22/1/2026 11:40:05 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:40:05 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:40:05 am ::1 GET /robots.txt
+ HTTP  22/1/2026 11:40:05 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:40:05 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:40:05 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:40:07 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:40:07 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:40:07 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:40:07 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:40:08 am ::1 GET /
+ HTTP  22/1/2026 11:40:08 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:40:08 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:40:08 am ::1 Returned 304 in 17 ms
+ HTTP  22/1/2026 11:40:08 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:40:08 am ::1 Returned 404 in 4 ms
+ HTTP  22/1/2026 11:40:10 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:40:10 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:41:29 am ::1 GET /
+ HTTP  22/1/2026 11:41:29 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:41:29 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:41:29 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:41:29 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:41:29 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:41:29 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:41:29 am ::1 Returned 404 in 4 ms
+ HTTP  22/1/2026 11:41:30 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:41:30 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:41:32 am ::1 GET /
+ HTTP  22/1/2026 11:41:32 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:41:32 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:41:32 am ::1 Returned 304 in 5 ms
+ HTTP  22/1/2026 11:41:34 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:41:34 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:41:35 am ::1 GET /
+ HTTP  22/1/2026 11:41:35 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:41:35 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:41:35 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:41:35 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:41:35 am ::1 Returned 404 in 6 ms
+ HTTP  22/1/2026 11:42:04 am ::1 GET /
+ HTTP  22/1/2026 11:42:04 am ::1 Returned 200 in 7 ms
+ HTTP  22/1/2026 11:42:04 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:42:04 am ::1 Returned 200 in 4 ms
+ HTTP  22/1/2026 11:42:04 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:42:04 am ::1 Returned 200 in 6 ms
+ HTTP  22/1/2026 11:42:06 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:42:06 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:42:06 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:42:06 am ::1 Returned 404 in 1 ms
+ HTTP  22/1/2026 11:42:17 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:42:17 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:42:27 am ::1 GET /
+ HTTP  22/1/2026 11:42:27 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:42:27 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:42:27 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:42:27 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:42:27 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:42:27 am ::1 Returned 304 in 6 ms
+ HTTP  22/1/2026 11:42:27 am ::1 Returned 404 in 27 ms
+ HTTP  22/1/2026 11:42:28 am ::1 GET /
+ HTTP  22/1/2026 11:42:28 am ::1 Returned 304 in 5 ms
+ HTTP  22/1/2026 11:42:28 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:42:28 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:42:28 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:42:28 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:42:28 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:42:28 am ::1 Returned 404 in 17 ms
+ HTTP  22/1/2026 11:42:29 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:42:29 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:43:55 am ::1 GET /
+ HTTP  22/1/2026 11:43:55 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:43:55 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:43:55 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:43:55 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:43:55 am ::1 Returned 200 in 4 ms
+ HTTP  22/1/2026 11:43:55 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:43:55 am ::1 Returned 404 in 16 ms
+ HTTP  22/1/2026 11:43:59 am ::1 GET /
+ HTTP  22/1/2026 11:43:59 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:43:59 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:43:59 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:43:59 am ::1 Returned 304 in 10 ms
+ HTTP  22/1/2026 11:43:59 am ::1 Returned 200 in 5 ms
+ HTTP  22/1/2026 11:43:59 am ::1 Returned 404 in 45 ms
+ HTTP  22/1/2026 11:46:43 am ::1 GET /
+ HTTP  22/1/2026 11:46:43 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:46:43 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:46:43 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:46:43 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:46:43 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:46:43 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:46:43 am ::1 Returned 404 in 14 ms
+ HTTP  22/1/2026 11:46:45 am ::1 GET /
+ HTTP  22/1/2026 11:46:45 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:46:45 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:46:45 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:46:45 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:46:45 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:46:45 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:46:45 am ::1 Returned 404 in 6 ms
+
+ INFO  Gracefully shutting down. Please wait...
+Terminate batch job (Y/N)? y
+PS D:\Operator3\Downloads\demo\pro\FPWA> npx serve
+
+   ┌──────────────────────────────────────────┐
+   │                                          │
+   │   Serving!                               │
+   │                                          │
+   │   - Local:    http://localhost:3000      │
+   │   - Network:  http://192.168.1.27:3000   │
+   │                                          │
+   │   Copied local address to clipboard!     │
+   │                                          │
+   └──────────────────────────────────────────┘
+
+ HTTP  22/1/2026 11:47:31 am 192.168.1.27 GET /
+ HTTP  22/1/2026 11:47:31 am 192.168.1.27 Returned 200 in 28 ms
+ HTTP  22/1/2026 11:47:31 am 192.168.1.27 GET /favicon.ico
+ HTTP  22/1/2026 11:47:31 am 192.168.1.27 Returned 200 in 6 ms
+ HTTP  22/1/2026 11:47:33 am 192.168.1.27 GET /manifest.json
+ HTTP  22/1/2026 11:47:33 am 192.168.1.27 Returned 200 in 6 ms
+ HTTP  22/1/2026 11:47:39 am 192.168.1.27 GET /
+ HTTP  22/1/2026 11:47:39 am 192.168.1.27 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:47:39 am 192.168.1.27 GET /favicon.ico
+ HTTP  22/1/2026 11:47:39 am 192.168.1.27 Returned 304 in 8 ms
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 GET /
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 Returned 304 in 3 ms
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 GET /favicon.ico
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 GET /
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 GET /favicon.ico
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 GET /
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 GET /favicon.ico
+ HTTP  22/1/2026 11:47:40 am 192.168.1.27 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:47:45 am ::1 GET /
+ HTTP  22/1/2026 11:47:45 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:47:45 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:47:45 am ::1 Returned 304 in 4 ms
+ HTTP  22/1/2026 11:47:47 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:47:47 am ::1 Returned 304 in 2 ms
+ HTTP  22/1/2026 11:47:49 am ::1 GET /
+ HTTP  22/1/2026 11:47:49 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:47:49 am ::1 Returned 304 in 3 ms
+ HTTP  22/1/2026 11:47:49 am ::1 Returned 304 in 5 ms
+ HTTP  22/1/2026 11:47:49 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:47:49 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:50:54 am ::1 GET /
+ HTTP  22/1/2026 11:50:54 am ::1 Returned 200 in 4 ms
+ HTTP  22/1/2026 11:50:54 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:50:54 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:50:54 am ::1 Returned 200 in 7 ms
+ HTTP  22/1/2026 11:50:54 am ::1 Returned 200 in 13 ms
+ HTTP  22/1/2026 11:50:54 am ::1 GET /.well-known/appspecific/com.chrome.devtools.json
+ HTTP  22/1/2026 11:50:54 am ::1 GET /icons/manifest-icon-192.maskable.png
+ HTTP  22/1/2026 11:50:54 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:50:54 am ::1 Returned 404 in 5 ms
+ HTTP  22/1/2026 11:51:00 am ::1 GET /icons/manifest-icon-512.maskable.png
+ HTTP  22/1/2026 11:51:00 am ::1 GET /icons/manifest-icon-192.maskable.png
+ HTTP  22/1/2026 11:51:00 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:51:00 am ::1 Returned 200 in 3 ms
+ HTTP  22/1/2026 11:54:05 am ::1 GET /
+ HTTP  22/1/2026 11:54:05 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:54:05 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:54:05 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:54:06 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:54:06 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:54:06 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:54:06 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:54:06 am ::1 GET /icons/manifest-icon-192.maskable.png
+ HTTP  22/1/2026 11:54:06 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:55:20 am ::1 GET /
+ HTTP  22/1/2026 11:55:20 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:55:21 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:55:21 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:55:21 am ::1 GET /favicon.ico
+ HTTP  22/1/2026 11:55:21 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:55:21 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:55:21 am ::1 Returned 200 in 2 ms
+ HTTP  22/1/2026 11:55:22 am ::1 GET /icons/manifest-icon-512.maskable.png
+ HTTP  22/1/2026 11:55:22 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:55:27 am ::1 GET /icons/manifest-icon-512.maskable.png
+ HTTP  22/1/2026 11:55:27 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:55:40 am ::1 GET /.well-known/assetlinks.json
+ HTTP  22/1/2026 11:55:40 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:55:41 am ::1 GET /.well-known/assetlinks.json
+ HTTP  22/1/2026 11:55:41 am ::1 Returned 404 in 2 ms
+ HTTP  22/1/2026 11:55:49 am ::1 GET /
+ HTTP  22/1/2026 11:55:49 am ::1 Returned 200 in 1 ms
+ HTTP  22/1/2026 11:55:50 am ::1 GET /manifest.json
+ HTTP  22/1/2026 11:55:50 am ::1 Returned 304 in 1 ms
+ HTTP  22/1/2026 11:55:51 am ::1 GET /service-worker.js
+ HTTP  22/1/2026 11:55:51 am ::1 Returned 304 in 1 ms
+
+ INFO  Gracefully shutting down. Please wait...
+Terminate batch job (Y/N)? ^C
