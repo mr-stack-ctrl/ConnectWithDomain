@@ -107,6 +107,31 @@ th {
         .then(() => console.log('Service Worker registered'))
         .catch(err => console.error('SW registration failed', err));
     }
+
+
+    // Function to call the API
+function callApi() {
+    fetch('https://curiosity-box.onrender.com/hi')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json(); // or response.text() depending on your API
+        })
+        .then(data => {
+            console.log('API response:', data);
+        })
+        .catch(error => {
+            console.error('Error calling API:', error);
+        });
+}
+
+// Call immediately once
+callApi();
+
+// Call every 10 minutes (10 minutes = 600,000 milliseconds)
+setInterval(callApi, 10 * 60 * 1000);
+
   </script>
 </body>
 </html>
