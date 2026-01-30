@@ -111,7 +111,7 @@ th {
  
 async function callApi() {
     try {
-        const response = await fetch('/proxy-hi'); // same origin, no CORS
+        const response = await fetch('/hi'); // same origin, no CORS
         const data = await response.text(); // or .json()
         console.log('API response:', data);
     } catch (error) {
