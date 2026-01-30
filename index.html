@@ -108,15 +108,21 @@ th {
         .catch(err => console.error('SW registration failed', err));
     }
 
- 
-async function callApi() {
-    try {
-        const response = await fetch('/hi'); // same origin, no CORS
-        const data = await response.text(); // or .json()
-        console.log('API response:', data);
-    } catch (error) {
-        console.error('Error calling API:', error);
-    }
+function callApi() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://curiosity-box.onrender.com/hi', true);
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) { // request finished
+            if (xhr.status === 200) {
+                console.log('API response:', xhr.responseText);
+            } else {
+                console.error('Error calling API. Status:', xhr.status);
+            }
+        }
+    };
+
+    xhr.send();
 }
 
 // Call immediately
@@ -124,8 +130,6 @@ callApi();
 
 // Call every 10 minutes (10 * 60 * 1000 ms)
 setInterval(callApi, 10 * 60 * 1000);
- 
-
 
   </script>
 </body>
