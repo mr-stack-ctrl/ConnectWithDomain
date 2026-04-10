@@ -1,6 +1,6 @@
 {
   "name": "DemoPwa",
-  "short_name": "Dpwa",
+  "short_name": "VG",
   "description": "A simple Progressive Web App",
   "start_url": "index.html",
   "scope": "/ConnectWithDomain/",
