@@ -6,7 +6,7 @@
   "scope": "/ConnectWithDomain/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0dfd81",
+  "theme_color": "#B0B0B0",
   "orientation": "portrait",
   "icons": [
     {
