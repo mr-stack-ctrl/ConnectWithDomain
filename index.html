@@ -1,1370 +1,545 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-     <link rel="icon" href="favicon (2).ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valyrian Gunner - Premium Revolvers 1919</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Government Exam Portal</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;600;700;800&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #7D6661;
-            --dark: #000000;
-            --light: #FFFFFF;
-            --accent-gold: #D4AF37;
-            --accent-red: #C41E3A;
-            --accent-blue: #1e3a5f;
-            --accent-green: #2d5a3d;
-            --gray-dark: #1a1a1a;
-            --gray-light: #f5f5f5;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0f0f0f 100%);
-            color: var(--light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                -45deg,
-                rgba(125, 102, 97, 0.05),
-                rgba(212, 175, 55, 0.05),
-                rgba(196, 30, 58, 0.05),
-                rgba(30, 58, 95, 0.05)
-            );
-            background-size: 400% 400%;
-            animation: gradient-shift 15s ease infinite;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        @keyframes gradient-shift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Logo SVG */
-        .logo-svg {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-        }
-
-        /* Navigation */
-        nav {
-            background: linear-gradient(135deg, rgba(125, 102, 97, 0.95), rgba(0, 0, 0, 0.95));
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--accent-gold);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1600px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 26px;
-            font-weight: 900;
-            color: var(--accent-gold);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-            transition: all 0.3s ease;
-            line-height: 1.1;
-        }
-
-        .logo:hover {
-            text-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-            transform: scale(1.02);
-        }
-
-        .nav-subtitle {
-            font-size: 10px;
-            color: var(--light);
-            opacity: 0.8;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .nav-right {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .owner-badge {
-            font-size: 12px;
-            color: var(--light);
-            padding: 10px 20px;
-            border: 2px solid var(--accent-gold);
-            border-radius: 30px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            background: rgba(212, 175, 55, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .owner-badge:hover {
-            background: var(--accent-gold);
-            color: var(--dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(
-                135deg,
-                rgba(125, 102, 97, 0.8) 0%,
-                rgba(0, 0, 0, 0.9) 50%,
-                rgba(30, 58, 95, 0.8) 100%
-            );
-            border-bottom: 5px solid var(--accent-gold);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent);
-            animation: float 20s ease-in-out infinite;
-            border-radius: 50%;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -20%;
-            left: 10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(196, 30, 58, 0.1), transparent);
-            animation: float-reverse 25s ease-in-out infinite;
-            border-radius: 50%;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-30px, -30px); }
-        }
-
-        @keyframes float-reverse {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(30px, 30px); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            max-width: 800px;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 72px;
-            font-weight: 900;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            letter-spacing: 4px;
-            text-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
-            text-transform: uppercase;
-            line-height: 1.2;
-        }
-
-        .hero-tagline {
-            font-size: 22px;
-            color: var(--light);
-            margin-bottom: 20px;
-            font-style: italic;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .hero-divider {
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-            margin: 20px auto;
-            border-radius: 2px;
-        }
-
-        .hero-description {
-            font-size: 16px;
-            color: var(--light);
-            max-width: 700px;
-            margin: 30px auto;
-            opacity: 0.9;
-            line-height: 1.8;
-        }
-
-        .hero-cta {
-            margin-top: 40px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            padding: 15px 40px;
-            background: linear-gradient(135deg, var(--accent-gold), #c49a3e);
-            color: var(--dark);
-            border: none;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            cursor: pointer;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.5);
-        }
-
-        .btn-secondary {
-            padding: 15px 40px;
-            background: transparent;
-            color: var(--light);
-            border: 2px solid var(--accent-gold);
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            cursor: pointer;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent-gold);
-            color: var(--dark);
-            transform: translateY(-3px);
-        }
-
-        .hero-owner {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid rgba(212, 175, 55, 0.3);
-            font-size: 15px;
-            color: var(--light);
-            letter-spacing: 1px;
-        }
-
-        /* Stats Section */
-        .stats-section {
-            background: linear-gradient(135deg, rgba(125, 102, 97, 0.15), rgba(196, 30, 58, 0.1));
-            padding: 60px 0;
-            border-top: 2px solid var(--accent-gold);
-            border-bottom: 2px solid var(--accent-gold);
-            margin: 60px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 30px;
-            border-radius: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-gold);
-            background: rgba(212, 175, 55, 0.05);
-        }
-
-        .stat-icon {
-            font-size: 40px;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
-        }
-
-        .stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 44px;
-            font-weight: 900;
-            color: var(--accent-gold);
-            margin: 15px 0;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: var(--light);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-        }
-
-        /* Filter Section */
-        .filter-section {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 50px 0;
-            border: 2px solid var(--accent-gold);
-            margin: 60px 0;
-            border-radius: 20px;
-        }
-
-        .filter-title {
-            text-align: center;
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .filters {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .filter-btn {
-            background: rgba(125, 102, 97, 0.3);
-            color: var(--light);
-            border: 2px solid var(--primary);
-            padding: 12px 28px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: linear-gradient(135deg, var(--accent-gold), #c49a3e);
-            color: var(--dark);
-            border-color: var(--accent-gold);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
-        }
-
-        /* Products Grid */
-        .products-section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 44px;
-            font-weight: 900;
-            color: var(--accent-gold);
-            margin-bottom: 60px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .product-card {
-            background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.9));
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
-            transition: left 0.5s ease;
-            z-index: 8;
-            pointer-events: none;
-        }
-
-        .product-card:hover {
-            border-color: var(--accent-gold);
-            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3), inset 0 0 20px rgba(212, 175, 55, 0.05);
-            transform: translateY(-15px);
-        }
-
-        .product-card:hover::before {
-            left: 100%;
-        }
-
-        .product-image-container {
-            position: relative;
-            height: 380px;
-            background: linear-gradient(135deg, rgba(125, 102, 97, 0.2), rgba(0, 0, 0, 0.4));
-            overflow: hidden;
-            display: contents;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 2px solid rgba(212, 175, 55, 0.2);
-            border-radius: 18px 18px 0 0;
-        }
-
-       .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;   
-    display: block;            
-        }
-
-        .product-card:hover .product-image {
-            transform: scale(1.08);
-        }
-
-        .product-image-placeholder {
-            width: 90%;
-            height: 90%;
-            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            border: 2px solid var(--accent-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-gold);
-            font-size: 13px;
-            font-style: italic;
-            border-radius: 15px;
-            position: relative;
-            text-align: center;
-            padding: 20px;
-            font-weight: 600;
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, var(--accent-gold), #c49a3e);
-            color: var(--dark);
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
-            z-index: 10;
-        }
-
-        .product-info {
-            padding: 35px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            z-index: 5;
-        }
-
-        .product-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 900;
-            color: var(--accent-gold);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .product-type {
-            font-size: 11px;
-            color: var(--accent-red);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .product-description {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 20px;
-            line-height: 1.7;
-            flex-grow: 1;
-        }
-
-        .specs-list {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(196, 30, 58, 0.05));
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--accent-gold);
-        }
-
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .spec-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .spec-label {
-            color: var(--accent-gold);
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            min-width: 90px;
-        }
-
-        .spec-value {
-            color: var(--light);
-            font-weight: 600;
-            text-align: right;
-        }
-
-        .price-section {
-            background: linear-gradient(135deg, var(--accent-gold), #c49a3e);
-            padding: 18px;
-            border-radius: 12px;
-            text-align: center;
-            color: var(--dark);
-            margin-top: auto;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover .price-section {
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
-            transform: scale(1.05);
-        }
-
-        .price-label {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
-
-        .price {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: 1.5px;
-        }
-
-        /* Atmosphere Section */
-        .atmosphere-section {
-            background: linear-gradient(135deg, rgba(125, 102, 97, 0.15), rgba(30, 58, 95, 0.15));
-            padding: 100px 0;
-            border-top: 5px solid var(--accent-gold);
-            border-bottom: 5px solid var(--accent-gold);
-            margin: 80px 0;
-        }
-
-        .atmosphere-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .atmos-card {
-            background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(20, 20, 20, 0.95));
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            position: relative;
-        }
-
-        .atmos-card:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-15px);
-            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
-        }
-
-        .atmos-image {
-            width: 100%;
-            height: 280px;
-            background: linear-gradient(135deg, rgba(125, 102, 97, 0.2), rgba(196, 30, 58, 0.1));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 3px solid var(--accent-gold);
-            position: relative;
-            overflow: hidden;
-            border-radius: 18px 18px 0 0;
-        }
-
-        .atmos-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .atmos-card:hover .atmos-image img {
-            transform: scale(1.1);
-        }
-
-        .atmos-image-placeholder {
-            width: 90%;
-            height: 90%;
-            background: linear-gradient(135deg, rgba(196, 30, 58, 0.15), rgba(30, 58, 95, 0.15));
-            border: 2px solid var(--accent-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-gold);
-            font-size: 12px;
-            font-style: italic;
-            border-radius: 12px;
-            text-align: center;
-            padding: 20px;
-            font-weight: 600;
-        }
-
-        .atmos-content {
-            padding: 30px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .atmos-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 900;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .atmos-text {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.8;
-        }
-
-        /* Collections */
-        .collections-section {
-            padding: 80px 0;
-        }
-
-        .collection-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .collection-card {
-            position: relative;
-            height: 300px;
-            border-radius: 20px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .collection-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(125, 102, 97, 0.4), rgba(0, 0, 0, 0.7));
-            z-index: 2;
-            transition: all 0.3s ease;
-        }
-
-        .collection-card:hover::before {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(0, 0, 0, 0.5));
-        }
-
-        .collection-bg {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-red));
-        }
-
-        .collection-content {
-            position: relative;
-            z-index: 3;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 30px;
-            color: var(--light);
-        }
-
-        .collection-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 26px;
-            font-weight: 900;
-            color: var(--accent-gold);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .collection-count {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.8);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, rgba(125, 102, 97, 0.95), rgba(0, 0, 0, 0.95));
-            border-top: 5px solid var(--accent-gold);
-            padding: 60px 0 30px;
-            margin-top: 100px;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 16px;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .footer-section p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 13px;
-            line-height: 1.8;
-        }
-
-        .footer-divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-            margin: 40px 0;
-            border-radius: 1px;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 2px solid rgba(212, 175, 55, 0.2);
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 12px;
-        }
-
-        .footer-owner {
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin-top: 15px;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 44px;
-            }
-
-            .hero-tagline {
-                font-size: 16px;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .filters {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .filter-btn {
-                width: 100%;
-            }
-
-            .nav-content {
-                padding: 0 20px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .nav-right {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--dark);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 6px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-gold);
-        }
+      :root {
+        --bg: #eef4ff;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --primary: #0b5ed7;
+        --primary-2: #0a4fb3;
+        --success: #16a34a;
+        --border: rgba(15, 23, 42, 0.12);
+        --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #e8f1ff, var(--bg));
+        color: var(--text);
+      }
+
+      header {
+        background: linear-gradient(90deg, var(--primary), #0f766e);
+        color: white;
+        padding: 16px 18px;
+        box-shadow: var(--shadow);
+      }
+
+      header .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      header h1 {
+        font-size: 18px;
+        margin: 0;
+        font-weight: 700;
+      }
+
+      header .meta {
+        font-size: 12px;
+        opacity: 0.95;
+      }
+
+      main {
+        max-width: 980px;
+        margin: 18px auto 40px;
+        padding: 0 14px;
+      }
+
+      .panel {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+        padding: 16px;
+      }
+
+      .top-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: end;
+      }
+
+      label {
+        font-size: 13px;
+        color: var(--muted);
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      select {
+        width: 100%;
+        height: 42px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        padding: 0 12px;
+        font-size: 14px;
+        outline: none;
+        background: #fff;
+      }
+
+      .btn {
+        height: 42px;
+        border-radius: 10px;
+        border: 1px solid rgba(11, 94, 215, 0.25);
+        background: var(--primary);
+        color: #fff;
+        padding: 0 14px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.03s ease, filter 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .btn:disabled {
+        cursor: not-allowed;
+        filter: grayscale(0.5);
+        opacity: 0.7;
+      }
+
+      .btn:hover:not(:disabled) {
+        filter: brightness(1.02);
+      }
+
+      .btn.secondary {
+        background: transparent;
+        color: var(--primary-2);
+        border-color: rgba(11, 94, 215, 0.25);
+      }
+
+      .hint {
+        margin-top: 10px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .questions {
+        margin-top: 14px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .question-card {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px;
+        background: #fbfdff;
+      }
+
+      .question-title {
+        margin: 0 0 10px;
+        font-size: 15px;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .options {
+        display: grid;
+        gap: 8px;
+      }
+
+      .option {
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        background: #fff;
+        border-radius: 12px;
+        padding: 10px 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        cursor: pointer;
+      }
+
+      .option input {
+        margin-top: 2px;
+        transform: scale(1.05);
+      }
+
+      .option .opt-text {
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      .option .opt-key {
+        font-weight: 800;
+        color: var(--primary-2);
+        min-width: 22px;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-top: 16px;
+        flex-wrap: wrap;
+      }
+
+      .loader {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .loader .spinner {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid rgba(11, 94, 215, 0.18);
+        border-top-color: var(--primary);
+        animation: spin 0.9s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .error {
+        margin-top: 10px;
+        color: #b91c1c;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      @media (max-width: 720px) {
+        .top-row {
+          grid-template-columns: 1fr;
+        }
+        .btn {
+          width: 100%;
+        }
+      }
     </style>
-</head>
-<body>
-    <div class="animated-bg"></div>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>Government Exam Portal</h1>
+        <div class="meta">Online MCQ Practice • Submit for Result</div>
+      </div>
+    </header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-content">
-            <div class="logo-section">
-                <!-- Professional Logo SVG -->
-                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#c49a3e;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <!-- Shield background -->
-                    <path d="M 50 10 L 85 30 L 85 55 Q 85 80 50 90 Q 15 80 15 55 L 15 30 Z" fill="url(#logoGradient)" stroke="#000" stroke-width="1.5"/>
-                    <!-- Revolver barrel -->
-                    <circle cx="50" cy="50" r="28" fill="none" stroke="#000" stroke-width="2"/>
-                    <!-- Central circle (cylinder) -->
-                    <circle cx="50" cy="50" r="18" fill="#000" stroke="#D4AF37" stroke-width="2"/>
-                    <!-- Trigger guard detail -->
-                    <path d="M 50 68 Q 55 72 50 76 Q 45 72 50 68" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
-                    <!-- Barrel line -->
-                    <line x1="68" y1="50" x2="85" y2="50" stroke="#D4AF37" stroke-width="2"/>
-                </svg>
+    <main>
+      <section class="panel">
+        <div class="top-row">
+          <div>
+            <label for="examSelect">Select Exam</label>
+            <select id="examSelect" disabled>
+              <option value="">Loading exams...</option>
+            </select>
+            <div class="hint">Changing the dropdown loads questions automatically.</div>
+          </div>
 
-                <div class="logo-text">
-                    <div class="logo">Valyrian<br>Gunner</div>
-                    <div class="nav-subtitle">1919 Birmingham Arsenal</div>
-                </div>
+          <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
+            <div class="loader" id="loader">
+              <div class="spinner"></div>
+              <div id="loaderText">Loading questions...</div>
             </div>
-            <div class="nav-right">
-                <div class="owner-badge">
-                    <i class="fas fa-crown" style="margin-right: 5px;"></i> Iqbal Singh Raikot 
-                </div>
-            </div>
+            <button class="btn secondary" type="button" id="reloadBtn" disabled>Reload Exams</button>
+          </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Valyrian Gunner</h1>
-            <div class="hero-divider"></div>
-            <div class="hero-tagline">The Arsenal of 1919 Birmingham</div>
-            <div class="hero-description">
-                Authentic, precision-engineered revolvers from Birmingham's golden age. 
-                Each weapon carries the weight of history, the craftsmanship of master engineers, 
-                and the untold stories of those who wielded them.
-            </div>
-           
-            <div class="hero-owner">
-                <strong>Website Owned & Operated By: Iqbal Singh</strong>
-            </div>
-        </div>
-    </section>
+        <div id="errorBox" class="error" style="display: none;"></div>
 
+        <form id="examForm" autocomplete="off">
+          <div class="questions" id="questions"></div>
 
-    <!-- Products Section -->
-    <section class="products-section container">
-        <h2 class="section-title">The Arsenal</h2>
-        <div class="products-grid">
-            <!-- Webley Mk VI -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://www.rathcoombe.net/sci-tech/classics/webley/Webley-MkVI.jpg">
-                    <span class="product-badge">★ Army Standard</span>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Webley Mk VI</div>
-                    <div class="product-type">British Army Service Revolver</div>
-                    <div class="product-description">
-                        The quintessential service revolver of the British Empire. Trusted by officers and soldiers worldwide.
-                    </div>
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-label">Caliber</span>
-                            <span class="spec-value">.455 Webley</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">6 Rounds</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Reload Time</span>
-                            <span class="spec-value">45-60 sec</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Users</span>
-                            <span class="spec-value">Army, Police</span>
-                        </div>
-                    </div>
-                    <div class="price-section">
-                        <div class="price-label">Premium Price</div>
-                        <div class="price">£12.50</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Enfield Mk II -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://d3h6k4kfl8m9p0.cloudfront.net/stories/Atju85KKq.q9JoVdHZqKsg.jpg">
-                    <span class="product-badge">★ Police Issue</span>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Enfield Mk II</div>
-                    <div class="product-type">Police & Security Edition</div>
-                    <div class="product-description">
-                        Precision British engineering meets reliability. Preferred by law enforcement across the Empire.
-                    </div>
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-label">Caliber</span>
-                            <span class="spec-value">.380 Enfield</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">6 Rounds</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Reload Time</span>
-                            <span class="spec-value">50-65 sec</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Users</span>
-                            <span class="spec-value">Police, Security</span>
-                        </div>
-                    </div>
-                    <div class="price-section">
-                        <div class="price-label">Standard Price</div>
-                        <div class="price">£10.00</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bulldog .442 -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://image.invaluable.com/housePhotos/lsbauctions/89/786189/H23057-L396753131_original.jpg">
-                    <span class="product-badge">★ Street Proven</span>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Bulldog .442</div>
-                    <div class="product-type">Street & Security</div>
-                    <div class="product-description">
-                        Compact and devastating. Built for those who need immediate response and don't compromise.
-                    </div>
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-label">Caliber</span>
-                            <span class="spec-value">.442</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">5 Rounds</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Reload Time</span>
-                            <span class="spec-value">40-50 sec</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Users</span>
-                            <span class="spec-value">Security, Local</span>
-                        </div>
-                    </div>
-                    <div class="price-section">
-                        <div class="price-label">Compact Price</div>
-                        <div class="price">£8.50</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Colt New Service -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://americanhandgunner.com/wp-content/uploads/2022/08/HND22-COLT-2.jpg">
-                    <span class="product-badge">★ Premium</span>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Colt New Service</div>
-                    <div class="product-type">Private Collection</div>
-                    <div class="product-description">
-                        American import. Heavy, powerful, unforgiving. Built for those with serious intent.
-                    </div>
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-label">Caliber</span>
-                            <span class="spec-value">.45 ACP</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">6 Rounds</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Reload Time</span>
-                            <span class="spec-value">55-70 sec</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Users</span>
-                            <span class="spec-value">Collectors, Org.</span>
-                        </div>
-                    </div>
-                    <div class="price-section">
-                        <div class="price-label">Premium Price</div>
-                        <div class="price">£15.00</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Iver Johnson -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://s1.img.bidsquare.com/item/xl/3720/3720532.jpeg?t=1FNPko">
-                    <span class="product-badge">★ Underground</span>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Iver Johnson Bulldog</div>
-                    <div class="product-type">Street & Underground</div>
-                    <div class="product-description">
-                        Concealable. Reliable. No serial numbers, no questions asked. Perfect for those beyond the law.
-                    </div>
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-label">Caliber</span>
-                            <span class="spec-value">.32</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">5 Rounds</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Reload Time</span>
-                            <span class="spec-value">35-45 sec</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Users</span>
-                            <span class="spec-value">Gangsters, Street</span>
-                        </div>
-                    </div>
-                    <div class="price-section">
-                        <div class="price-label">Affordable Price</div>
-                        <div class="price">£7.25</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Smith & Wesson -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="https://www.19fortyfive.com/wp-content/uploads/2023/04/Smith-and-Wesson-Model-10.jpg">
-                    <span class="product-badge">★ Balanced</span>
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Smith & Wesson .38</div>
-                    <div class="product-type">Service & Street</div>
-                    <div class="product-description">
-                        Perfect balance of power and control. Trusted by those who walk the fine line between law and survival.
-                    </div>
-                    <div class="specs-list">
-                        <div class="spec-item">
-                            <span class="spec-label">Caliber</span>
-                            <span class="spec-value">.38 Special</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">6 Rounds</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Reload Time</span>
-                            <span class="spec-value">50-60 sec</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Users</span>
-                            <span class="spec-value">Police, Local</span>
-                        </div>
-                    </div>
-                    <div class="price-section">
-                        <div class="price-label">Mid-Range Price</div>
-                        <div class="price">£9.75</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Collections -->
-    <section class="collections-section container">
-        <h2 class="section-title">Featured Collections</h2>
-        <div class="collection-grid">
-            <div class="collection-card">
-                <div class="collection-bg" style="background: linear-gradient(135deg, #1e3a5f, #0f2a3f);"></div>
-                <div class="collection-content">
-                    <div class="collection-name">Military Grade</div>
-                    <div class="collection-count">3 Revolvers • Army Exclusive</div>
-                </div>
-            </div>
-            <div class="collection-card">
-                <div class="collection-bg" style="background: linear-gradient(135deg, #C41E3A, #8B0000);"></div>
-                <div class="collection-content">
-                    <div class="collection-name">Street Legends</div>
-                    <div class="collection-count">3 Revolvers • Underground</div>
-                </div>
-            </div>
-            <div class="collection-card">
-                <div class="collection-bg" style="background: linear-gradient(135deg, #2d5a3d, #1a3a2a);"></div>
-                <div class="collection-content">
-                    <div class="collection-name">Premium Edition</div>
-                    <div class="collection-count">1 Revolver • Collectors Only</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Atmosphere Section -->
-    <section class="atmosphere-section">
-        <div class="container">
-            <h2 class="section-title">The Spirit of 1919 Birmingham</h2>
-            <div class="atmosphere-grid">
-                <!-- Gangsters -->
-                <div class="atmos-card">
-                    <div class="atmos-image">
-                        <img src="https://www.theplaidzebra.com/wp-content/uploads/2015/04/9_1920s-gangster.jpg">
-                    </div>
-                    <div class="atmos-content">
-                        <div class="atmos-title">Gangsters & Goons</div>
-                        <div class="atmos-text">
-                            The underworld runs deep in Birmingham. Organized crews with slicked-back hair, tailored suits, and Cuban cigars dominate smoky backrooms. Their revolvers are calling cards of power and authority in a lawless underworld.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Police -->
-                <div class="atmos-card">
-                    <div class="atmos-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/1919_Battle_of_George_Square_-_David_Kirkwood.jpg">
-                    </div>
-                    <div class="atmos-content">
-                        <div class="atmos-title">The Law & Order</div>
-                        <div class="atmos-text">
-                            Police walk the beat with steel at their side. Their revolvers represent justice and the thin blue line separating chaos from civilization. Every shot fired is a decision with consequences echoing through the city.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Street Survivors -->
-                <div class="atmos-card">
-                    <div class="atmos-image">
-                        <img src="https://thehistorypress.co.uk/wp-content/uploads/media/1737/ambulance-train-with-nurses-iwm-wpv_1020x800_center_center.jpg">
-                    </div>
-                    <div class="atmos-content">
-                        <div class="atmos-title">Street Survivors</div>
-                        <div class="atmos-text">
-                            Common folk carry iron for protection. In factories and streets of Birmingham, a revolver means survival. It speaks louder than words and commands respect faster than argument in a city without mercy.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3><i class="fas fa-gun"></i> Valyrian Gunner</h3>
-                    <p>Premium revolvers from Birmingham's golden age. Each weapon tells a story. Each caliber carries history. Authentic. Rare. Legendary.</p>
-                </div>
-                <div class="footer-section">
-                    <h3><i class="fas fa-history"></i> 1919 Heritage</h3>
-                    <p>Crafted in Birmingham, England during the golden age of guncraft. These revolvers represent engineering excellence and historical complexity.</p>
-                </div>
-                <div class="footer-section">
-                    <h3><i class="fas fa-medal"></i> Authenticity</h3>
-                    <p>Every revolver is authenticated and documented. We deal only in authentic historical weapons with verified provenance and excellent condition.</p>
-                </div>
-            </div>
-
-            <div class="footer-divider"></div>
-
-            <div class="footer-bottom">
-                <div style="font-size: 16px; color: var(--accent-gold); margin-bottom: 10px;">
-                    <i class="fas fa-crown"></i> VALYRIAN GUNNER <i class="fas fa-crown"></i>
-                </div>
-                <p>Authentic Revolvers from Birmingham's Golden Age • 1919</p>
-                <p style="margin-top: 15px; font-size: 11px; opacity: 0.7;">
-                    Birmingham, England • Est. 1919
-                </p>
-                <div class="footer-owner">
-                    <i class="fas fa-user-circle"></i> Website Owned & Operated By: <strong>Iqbal Singh</strong>
-                </div>
-                <p style="margin-top: 20px; font-size: 10px; opacity: 0.6;">
-                    © 1919-2024 Valyrian Gunner. All Rights Reserved. | Proprietor: Iqbal Singh
-                </p>
-            </div>
-        </div>
-    </footer>
+          <div class="footer-row">
+            <div class="hint" id="statusText">Select an exam to begin.</div>
+            <button class="btn" type="submit" id="submitBtn" disabled>Submit Answers</button>
+          </div>
+        </form>
+      </section>
+    </main>
 
     <script>
-        // Filter functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-            });
+      (function () {
+        const apiBase = "http://localhost:8080/exam";
+
+        const examSelect = document.getElementById("examSelect");
+        const questionsEl = document.getElementById("questions");
+        const submitBtn = document.getElementById("submitBtn");
+        const errorBox = document.getElementById("errorBox");
+        const statusText = document.getElementById("statusText");
+        const loader = document.getElementById("loader");
+        const loaderText = document.getElementById("loaderText");
+        const reloadBtn = document.getElementById("reloadBtn");
+        const examForm = document.getElementById("examForm");
+
+        let currentQuestions = [];
+        let currentExamName = "";
+
+        function showError(message) {
+          errorBox.textContent = message;
+          errorBox.style.display = "block";
+        }
+
+        function clearError() {
+          errorBox.textContent = "";
+          errorBox.style.display = "none";
+        }
+
+        function setLoading(isLoading, text) {
+          loader.style.display = isLoading ? "flex" : "none";
+          if (text) loaderText.textContent = text;
+        }
+
+        function clearQuestions() {
+          questionsEl.innerHTML = "";
+        }
+
+        function safeText(s) {
+          return String(s ?? "");
+        }
+
+        function renderQuestions(questions) {
+          clearQuestions();
+          currentQuestions = Array.isArray(questions) ? questions : [];
+
+          if (currentQuestions.length === 0) {
+            statusText.textContent = "No questions returned from API.";
+            submitBtn.disabled = true;
+            return;
+          }
+
+          // Ensure stable order by questionNumber when possible
+          const sorted = [...currentQuestions].sort((a, b) => {
+            const an = Number(a.questionNumber);
+            const bn = Number(b.questionNumber);
+            if (Number.isFinite(an) && Number.isFinite(bn)) return an - bn;
+            return 0;
+          });
+
+          for (const q of sorted) {
+            const qNum = q.questionNumber;
+            const title = safeText(q.questionText);
+
+            const card = document.createElement("div");
+            card.className = "question-card";
+
+            const h = document.createElement("h3");
+            h.className = "question-title";
+            h.textContent = `Q${qNum}. ${title}`;
+            card.appendChild(h);
+
+            const optionsWrap = document.createElement("div");
+            optionsWrap.className = "options";
+
+            const optionsObj = q.options || {};
+            const optionKeys = ["A", "B", "C", "D"].filter((k) => Object.prototype.hasOwnProperty.call(optionsObj, k));
+
+            if (optionKeys.length === 0) {
+              const empty = document.createElement("div");
+              empty.className = "hint";
+              empty.textContent = "No options found for this question.";
+              optionsWrap.appendChild(empty);
+            } else {
+              for (const key of optionKeys) {
+                const optText = safeText(optionsObj[key]);
+
+                const label = document.createElement("label");
+                label.className = "option";
+
+                const input = document.createElement("input");
+                input.type = "radio";
+                input.name = `q_${qNum}`;
+                input.value = key;
+
+                const spanKey = document.createElement("div");
+                spanKey.className = "opt-key";
+                spanKey.textContent = key;
+
+                const spanText = document.createElement("div");
+                spanText.className = "opt-text";
+                spanText.textContent = optText;
+
+                label.appendChild(input);
+                label.appendChild(spanKey);
+                label.appendChild(spanText);
+
+                optionsWrap.appendChild(label);
+              }
+            }
+
+            card.appendChild(optionsWrap);
+            questionsEl.appendChild(card);
+          }
+
+          statusText.textContent = "Choose your options and submit.";
+          submitBtn.disabled = false;
+        }
+
+        async function fetchExamNames() {
+          setLoading(true, "Loading exam names...");
+          clearError();
+          examSelect.disabled = true;
+          submitBtn.disabled = true;
+          clearQuestions();
+          statusText.textContent = "Loading exam names...";
+
+          const res = await fetch(apiBase + "/exam-name", { method: "GET" });
+          if (!res.ok) throw new Error("Failed to load exam names.");
+          const data = await res.json();
+
+          if (!Array.isArray(data)) throw new Error("Exam names response is not an array.");
+
+          examSelect.innerHTML = '<option value="">Select an exam</option>';
+          for (const name of data) {
+            const opt = document.createElement("option");
+            opt.value = safeText(name);
+            opt.textContent = safeText(name);
+            examSelect.appendChild(opt);
+          }
+
+          examSelect.disabled = false;
+          reloadBtn.disabled = false;
+          statusText.textContent = "Select an exam to begin.";
+          setLoading(false);
+        }
+
+        async function fetchQuestions(examName) {
+          setLoading(true, "Loading questions...");
+          clearError();
+          submitBtn.disabled = true;
+          statusText.textContent = "Loading questions...";
+          clearQuestions();
+
+          const url = apiBase + "/get-question?examName=" + encodeURIComponent(examName);
+          const res = await fetch(url, { method: "GET" });
+          if (!res.ok) throw new Error("Failed to load questions for this exam.");
+          const data = await res.json();
+
+          renderQuestions(data);
+          setLoading(false);
+        }
+
+        examSelect.addEventListener("change", async function () {
+          const examName = examSelect.value;
+          currentExamName = examName;
+          if (!examName) {
+            currentQuestions = [];
+            submitBtn.disabled = true;
+            clearQuestions();
+            statusText.textContent = "Select an exam to begin.";
+            return;
+          }
+
+          try {
+            await fetchQuestions(examName);
+          } catch (err) {
+            setLoading(false);
+            showError(err?.message || "Error loading questions.");
+            statusText.textContent = "Please try selecting a different exam.";
+          }
         });
 
-        // Smooth scroll for buttons
-        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelector('.products-section').scrollIntoView({ behavior: 'smooth' });
-            });
+        reloadBtn.addEventListener("click", async function () {
+          try {
+            await fetchExamNames();
+          } catch (err) {
+            showError(err?.message || "Error loading exam names.");
+            setLoading(false);
+          }
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        examForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          clearError();
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInDown 0.6s ease-out forwards';
-                    observer.unobserve(entry.target);
-                }
+          if (!currentExamName) {
+            showError("Please select an exam first.");
+            return;
+          }
+          if (!Array.isArray(currentQuestions) || currentQuestions.length === 0) {
+            showError("No questions to submit.");
+            return;
+          }
+
+          const payload = [];
+          let attemptedCount = 0;
+
+          for (const q of currentQuestions) {
+            const qNum = q.questionNumber;
+            const checked = examForm.querySelector(`input[name="q_${qNum}"]:checked`);
+            if (checked) attemptedCount += 1;
+            payload.push({
+              questionNumber: qNum,
+              // Keep payload shape consistent for the backend: empty string means "not attempted".
+              optionsChoosed: checked ? checked.value : "",
             });
-        }, observerOptions);
+          }
 
-        document.querySelectorAll('.product-card, .atmos-card, .collection-card').forEach(el => {
-            observer.observe(el);
+          if (attemptedCount === 0) {
+            showError("Please select at least one option before submitting.");
+            return;
+          }
+
+          submitBtn.disabled = true;
+          statusText.textContent = "Submitting your answers...";
+          setLoading(true, "Submitting result...");
+
+          try {
+            const submitUrl = apiBase + "/submit-result/" + encodeURIComponent(currentExamName);
+            const res = await fetch(submitUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            });
+
+            if (!res.ok) throw new Error("Failed to submit result.");
+
+            const result = await res.json();
+
+            const totalQuestions = Number(result?.totalQuestions ?? currentQuestions.length);
+            const notAttemptedCount = Math.max(0, totalQuestions - attemptedCount);
+
+            sessionStorage.setItem(
+              "examResult",
+              JSON.stringify({
+                ...result,
+                examName: currentExamName,
+                attemptedCount,
+                notAttemptedCount,
+                accuracyPercent: totalQuestions > 0 ? ((Number(result?.correctAnswers ?? 0) / totalQuestions) * 100) : 0,
+              })
+            );
+
+            window.location.href = "result.html";
+          } catch (err) {
+            showError(err?.message || "Error submitting result.");
+            statusText.textContent = "Please try again.";
+            setLoading(false);
+            submitBtn.disabled = false;
+          }
         });
+
+        // Initial load
+        fetchExamNames().catch((err) => {
+          showError(err?.message || "Error loading exam names.");
+          setLoading(false);
+          statusText.textContent = "Unable to load exams. Check backend server/CORS.";
+        });
+      })();
     </script>
-</body>
+  </body>
 </html>
