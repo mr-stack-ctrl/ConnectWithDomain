@@ -511,7 +511,7 @@
           submitBtn.disabled = true;
           statusText.textContent = "Submitting your answers...";
           setLoading(true, "Submitting result...");
-
+          const userName="mr-stack-ctrl";
           try {
             const submitUrl = apiBase + "/submit-result/" + encodeURIComponent(currentExamName)"/"+ encodeURIComponent(userName);
             const res = await fetch(submitUrl, {
