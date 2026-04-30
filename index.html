@@ -513,7 +513,7 @@
           setLoading(true, "Submitting result...");
 
           try {
-            const submitUrl = apiBase + "/submit-result/" + encodeURIComponent(currentExamName);
+            const submitUrl = apiBase + "/submit-result/" + encodeURIComponent(currentExamName)"/"+ encodeURIComponent(userName);
             const res = await fetch(submitUrl, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
